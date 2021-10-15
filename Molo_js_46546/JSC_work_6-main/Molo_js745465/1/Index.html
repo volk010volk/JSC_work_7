@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее задание №2</title>
+</head>
+<body>
+    <script>
+        var a = +prompt ("Задание 1 / Задача 1.\nВведите свои возраст:");
+        if (a <= 12)
+            alert ("Вы ребенок.");
+        else
+            if (a >= 13 && a <= 18)
+                alert ("Вы подросток.");
+            else
+                if (a >= 19 && a <= 60)
+                    alert ("Вы взрослый.");
+                else
+                    alert ("Вы пенсионер.");
+
+
+        var a = +prompt ("Задание 1 / Задача 2.\nВведите число от 1 до 9:");
+        switch (a) {
+            case 1: alert ("!"); break;
+            case 2: alert ("@"); break;
+            case 3: alert ("#"); break;
+            case 4: alert ("$"); break;
+            case 5: alert ("%"); break;
+            case 6: alert ("^"); break;
+            case 7: alert ("&"); break;
+            case 8: alert ("*"); break;
+            case 9: alert ("("); break;
+            default: alert ("Вы ввели неверное число.")
+        }
+
+
+        var a = +prompt("Задание 1 / Задача 3.\nВведите трехзначное число: ");
+        var a1 = parseInt(a / 100);
+        var a2 = parseInt(a / 10) % 10;
+        var a3 = a % 10;
+        if(a1===a2 || a2===a3 || a1===a3)
+            alert("Найдено совпадение цифр");
+        else
+            alert("Совпадений не найдено");
+
+            
+
+        var a = +prompt("Задание 2 / Задача 6.\nВведите сумму покупки:");
+        if (a >= 200 && a < 300)
+            alert ("Сумма к оплате со скидкой 3%, составляет:  " + (a - (a * 3 / 100)) + " $");
+        else
+            if (a >= 300 && a < 500)
+                alert ("Сумма к оплате со скидкой 5%, составляет:  " + (a - (a * 5 / 100)) + " $");
+            else
+                if (a >= 500)
+                    alert ("Сумма к оплате со скидкой 7%, составляет:  " + (a - (a * 7 / 100)) + " $");
+                else
+                    alert ("На данную сумму  " + a + "  $ нет скидок.");
+
+    </script>
+</body>
+</html>

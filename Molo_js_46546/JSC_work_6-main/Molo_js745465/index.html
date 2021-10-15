@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var rect = {
+        x1: 1,
+        y1: 5,
+        x2: 6,
+        y2: 2 
+    };
+    var n, m, str = "";
+
+    // Задача 1.
+    function objInfo(givenObject){
+        let str = "Свойства данного объекта:";
+        for (var tempProperty in givenObject)
+            str += "\n" + tempProperty + ": " + givenObject[tempProperty];
+        alert (str);
+    }
+    // objInfo(rect);
+
+    // Задача 2.
+    // function rectSizes(givenRect){
+    //     alert("Ширина прямоугольника = " + (givenRect.x2 - givenRect.x1) +
+    //         "\nВысота прямоугольника = " + (givenRect.y1 - givenRect.y2) + ".");
+    // }
+    // rectSizes(rect);
+
+    // Задача 3.
+    // n = +prompt("Насколько вы хотите поменять ширину?:");
+    // m = +prompt("Насколько вы хотите поменять высоту?:");
+    // function changedSizes(givenRect){
+    //     alert("Измененая ширина прямоугольника = " + (givenRect.x2 - givenRect.x1 + n) +
+    //         "\nИзмененая высота прямоугольника = " + (givenRect.y1 - givenRect.y2 + m) + ".");
+    // }
+    // changedSizes(rect);
+
+    // Задача 4.
+    // n = +prompt("Насколько вы хотите сдвинуть прямоугольник по X?:");
+    // m = +prompt("Насколько вы хотите сдвинуть прямоугольник по Y?:");
+    // function moveRect(givenRect){
+    //     givenRect.x1 += n; givenRect.x2 += n;
+    //     givenRect.y1 += m; givenRect.y2 += m;
+    //     objInfo(givenRect);
+    // }
+    // moveRect(rect);
+
+    // Задача 5.
+    n = +prompt ("Введите x:");
+    m = +prompt ("Введите y:");
+    function checkDot (givenRect) {
+        if (n >= givenRect.x1 && n <= givenRect.x2 && m >= givenRect.y2 && m <= givenRect.y1)
+        alert("Точка (" + n + ";" + m + ") находится внутри прямоугольника");
+        else
+            alert("Точка (" + n + ";" + m + ") не находится внутри прямоугольника");
+    }
+    checkDot(rect);
+
+    
+
+
+    </script>
+</body>
+</html>

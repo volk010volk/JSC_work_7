@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задача 2.
+        // var n, m, max = 0;
+
+        // n = +prompt();
+        // m = +prompt();
+        // for (i = 1; i <= n; i++)
+        //     if (n % i == 0 && m % i == 0 && i > max)
+        //         max = i;
+        // alert(max);
+
+        // Задача 4.
+        // n = +prompt("dsf");
+        // k = 1;
+        // while (n >= 10){
+        //     n /= 10;
+        //     k++;
+        // }
+        // alert(k);
+
+        // Задача 10.
+        alert("Давайте сыграем! Загадайте число от 0 до 100, а я попробую его угадать:");
+        n = 50;
+        nMax = 100;
+        nMin = 0;
+        while (m != "=") {
+            m = promt("Ваше число больше, меньше или равно " + n + "?");
+            switch (m) {
+                case ">": 
+                    nMin = n; 
+                    n = Math.round(n + (100 - n) / 2); break;
+                case "<": 
+                    nMax = n; 
+                    n = Math.round(n / 2); break;
+                case "=": 
+                    alert ("Ура! Я угадал"); break;
+                default : 
+                    alert ("Ошибка. Такого символа нет!");
+            }
+        }
+    </script>
+</body>
+</html>
